@@ -1,0 +1,2 @@
+# SynagogueDashboard
+Synagogue dashboard
