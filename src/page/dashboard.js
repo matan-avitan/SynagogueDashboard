@@ -1,14 +1,18 @@
 import React from "react";
 import Clock from "../components/Clock";
 import {Card, Col, Row} from "react-bootstrap";
+import DashboardTitle from "../components/dashboardTitle";
+import PrayTime from "../components/prayTime";
+import Messages from "../components/messages";
+import Shabat from "../components/shabat";
+import WebFooter from "../components/webFooter";
+import Deceased from "../components/deceased";
 
 function Dashboard() {
 
     return (
         <div>
-            <h1>
-                בית כנסת
-            </h1>
+            <DashboardTitle/>
             <hr/>
             <div>
                 <Clock/>
@@ -17,20 +21,14 @@ function Dashboard() {
             <div>
                 <Row>
                     <Col>
-                        <Card>
-                            שעות תפילה
-                        </Card>
+                        <PrayTime/>
                     </Col>
                     <Col>
-                        <Card>
-                            זמני כניסת השבת
-                        </Card>
+                        <Shabat/>
                     </Col>
 
                     <Col>
-                        <Card>
-                            הודעות
-                        </Card>
+                        <Messages/>
                     </Col>
 
                 </Row>
@@ -38,18 +36,13 @@ function Dashboard() {
             <br/>
             <Row>
                 <Col>
-                    <Card>
-                        נפטרים
-                    </Card>
+                    <Deceased/>
                 </Col>
             </Row>
             <br/>
             <Row>
-                <Col>
-                    <Card>
-נתרם לעילוי נשמת
-                    </Card>
-                </Col>
+                <WebFooter/>
+
             </Row>
         </div>
     )
