@@ -35,10 +35,10 @@ export default function Deceased() {
                     <Carousel className='deceased' controls={false} indicators={false}>
                         {getDeceasedCard(deceasedDataFirst)}
                     </Carousel>
-                    <Carousel className='deceased' controls={false} indicators={false}>
+                    <Carousel className='deceased'  controls={false} indicators={false}>
                         {getDeceasedCard(deceasedDataSecond)}
                     </Carousel>
-                    <Carousel className='deceased' controls={false} indicators={false}>
+                    <Carousel className='deceased'  controls={false} indicators={false}>
                         {getDeceasedCard(deceasedDataThird)}
                     </Carousel>
                 </div>

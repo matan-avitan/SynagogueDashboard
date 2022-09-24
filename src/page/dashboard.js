@@ -135,7 +135,7 @@ function Dashboard() {
 
     return (
         <div>
-            <Carousel fade controls={false} indicators={false}>
+            <Carousel controls={false} indicators={false}>
                 <Carousel.Item interval={6000}>
                     <br/>
                     <br/>
