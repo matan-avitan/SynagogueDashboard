@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from "react";
 import Clock from "../components/Clock";
-import {Card, Col, Row} from "react-bootstrap";
+import {Card, Carousel, Col, Row} from "react-bootstrap";
 import DashboardTitle from "../components/dashboardTitle";
 import PrayTime from "../components/prayTime";
 import Messages from "../components/deceased";
@@ -135,49 +135,72 @@ function Dashboard() {
 
     return (
         <div>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
+            <Carousel fade controls={false} indicators={false}>
+                <Carousel.Item interval={5000}>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <img
 
-            <NewDashboardTitle/>
-            <hr/>
-            <div>
-                <Row>
+                        src={require('./times2.png')}
 
+                    />
+                </Carousel.Item>
+                <Carousel.Item interval={500}>
+                </Carousel.Item>
 
-                    <Col lg={3}>
-                        <PrayTime/>
-                    </Col>
-                    <Col lg={4}>
-                        <Shabat currentShabat={currentShabat}/>
-                    </Col>
+                <Carousel.Item interval={30000}>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
 
-                    <Col lg={4}>
-                        <Deceased/>
-                    </Col>
-                    <Col lg={1}>
-
-
-
-                        <div>
-                            <img className='gif-size' src={require('./Candle.gif')} alt='Logo'/>
-                        </div>
-                    </Col>
-
-                </Row>
-                <br/>
+                    <NewDashboardTitle/>
+                    <hr/>
+                    <div>
+                        <Row>
 
 
-                <br/>
-                <Row>
-                    <WebFooter/>
+                            <Col lg={3}>
+                                <PrayTime/>
+                            </Col>
+                            <Col lg={4}>
+                                <Shabat currentShabat={currentShabat}/>
+                            </Col>
 
-                </Row>
-            </div>
+                            <Col lg={4}>
+                                <Deceased/>
+                            </Col>
+                            <Col lg={1}>
+
+
+                                <div>
+                                    <img className='gif-size' src={require('./Candle.gif')} alt='Logo'/>
+                                </div>
+                            </Col>
+
+                        </Row>
+                        <br/>
+
+
+                        <br/>
+                        <Row>
+                            <WebFooter/>
+
+                        </Row>
+                    </div>
+
+
+                </Carousel.Item>
+                                <Carousel.Item interval={500}>
+                </Carousel.Item>
+            </Carousel>
 
 
         </div>
