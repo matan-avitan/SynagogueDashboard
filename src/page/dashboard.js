@@ -11,6 +11,7 @@ import Deceased from "../components/deceased";
 import {shabatTimesData} from "../data/shabatTimesData";
 import NewDashboardTitle from "../components/newTitle";
 
+// import candle from "./Candle.gif";
 
 function Dashboard() {
     const [shabatData, setShabatData] = useState([])
@@ -116,7 +117,6 @@ function Dashboard() {
         if (shabatData !== []) {
             setInterval(() => {
                 const today = new Date();
-                today.setDate(today.getDate() +1)
                 const shabatFound = shabatData.find(shabat => isBefore(today, shabat.date));
 
                 const s = {
@@ -147,22 +147,30 @@ function Dashboard() {
             <hr/>
             <div>
                 <Row>
-                    <Col>
+
+
+                    <Col lg={3}>
                         <PrayTime/>
                     </Col>
-                    <Col>
+                    <Col lg={4}>
                         <Shabat currentShabat={currentShabat}/>
                     </Col>
 
-                    <Col>
+                    <Col lg={4}>
                         <Deceased/>
+                    </Col>
+                    <Col lg={1}>
+                        <br/>
+                        <br/>
+                        <br/>
+                        <div>
+                            <img className='gif-size' src={require('./velaVSantas3.gif')} alt='Logo'/>
+                        </div>
                     </Col>
 
                 </Row>
                 <br/>
-                <br/>
-                <br/>
-                <br/>
+
 
                 <br/>
                 <Row>
@@ -170,6 +178,7 @@ function Dashboard() {
 
                 </Row>
             </div>
+
 
         </div>
     )

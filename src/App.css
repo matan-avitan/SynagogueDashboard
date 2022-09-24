@@ -37,10 +37,11 @@
 .time-pray-text {
     background-color: transparent !important;
     border: transparent !important;
-    font-size: large !important;
-    min-width: 100px;
+    /*font-size: large !important;*/
+    width: 150px;
     margin: auto !important;
     text-align: right;
+    font-size: 25px !important;
 }
 
 .time-pray {
@@ -68,7 +69,7 @@
 .pray-card {
     padding-top: 10px;
     padding-right: 50px;
-    padding-left: 100px;
+    padding-left: 80px;
 }
 
 .deceased-card {
@@ -88,4 +89,13 @@
 
 .clock {
     font-size: 150px;
+}
+
+.deceased {
+    height: 100px !important;
+}
+
+.box-carousel {
+    max-width: 300px;
+    margin: auto;
 }

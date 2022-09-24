@@ -1,18 +1,26 @@
-import {Card} from "react-bootstrap";
+import {Card, Carousel} from "react-bootstrap";
 import React from "react";
 import {deceasedData} from '../data/deceasedData'
-import AnnouncementBar from "react-announcement-bar/src";
 
 export default function Deceased() {
 
-    const getDeceasedCard = () => {
-        return deceasedData.map(person => {
-            return (<div>
-                <h5 className='hebrew'>
-                    {person.name}
-                </h5>
-                <br/>
-            </div>)
+    const deceasedDataFirst = deceasedData.slice(0, deceasedData.length / 3)
+    const deceasedDataSecond = deceasedData.slice(deceasedData.length / 3, deceasedData.length / 3 * 2)
+    const deceasedDataThird = deceasedData.slice(deceasedData.length / 3 * 2, deceasedData.length)
+
+
+    const getDeceasedCard = (list) => {
+
+        return list.map(person => {
+            return (
+                <Carousel.Item interval={2000}>
+                    <div className='deceased'>
+                        <h5 className='hebrew'>
+                            {person.name}
+                        </h5>
+                    </div>
+                </Carousel.Item>
+            )
         })
     }
 
@@ -23,18 +31,18 @@ export default function Deceased() {
                 לעילוי נשמת
             </Card.Title>
             <Card.Text>
-                <AnnouncementBar height="60" backgroundColor="#000000" relative={false} width="100%">
-                    {
-                        () => {
-                            return (
-                                <div style={{width: "80%", margin: "auto", color: "#ffffff"}}>
-                                    Want to recieve notifications
-                                    <a href="#" style={{fontWeight: "bold", color: "#ffffff"}}>ENABLE !</a>
-                                </div>
-                            )
-                        }
-                    }
-                </AnnouncementBar>
+                <div className='box-carousel'>
+                    <Carousel className='deceased' controls={false} indicators={false}>
+                        {getDeceasedCard(deceasedDataFirst)}
+                    </Carousel>
+                    <Carousel className='deceased' controls={false} indicators={false}>
+                        {getDeceasedCard(deceasedDataSecond)}
+                    </Carousel>
+                    <Carousel className='deceased' controls={false} indicators={false}>
+                        {getDeceasedCard(deceasedDataThird)}
+                    </Carousel>
+                </div>
+
             </Card.Text>
         </Card>
     )

@@ -1,4 +1,9 @@
 .hebrew {
     font-family: 'Guttman-Aram';
+    font-weight: bold;
 
+}
+
+.gif-size {
+    width: 150px !important;
 }

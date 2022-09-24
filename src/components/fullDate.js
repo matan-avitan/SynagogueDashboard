@@ -42,12 +42,7 @@ function FullDate() {
 
     useEffect(() => {
         setInterval(() => {
-            const myDate = new Date()
-            const month = myDate.getMonth()
-            const year = myDate.getFullYear()
-            const day = myDate.getDay()
-            const hDate = hebrewDate(year, month, day)
-
+            const hDate = hebrewDate(new Date())
             setMonthDate(hDate.month_name);
             setDayDate(hDate.date);
             setYearDate(hDate.year);

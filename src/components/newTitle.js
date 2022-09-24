@@ -1,7 +1,7 @@
 import React from "react";
 import {Col, Row} from "react-bootstrap";
 import Clock from "./Clock";
-import Date from "./date";
+import Date from "./fullDate";
 
 
 export default function NewDashboardTitle() {
