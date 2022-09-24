@@ -7,12 +7,10 @@ export default function Shabat({currentShabat}) {
     const [shabatEnd, setShabatEnd] = useState('')
 
     useEffect(() => {
-        console.log(currentShabat)
+
         setShabatStart(currentShabat.shabatStart ? currentShabat.shabatStart : '')
         setShabatEnd(currentShabat.shabatEnd ? currentShabat.shabatEnd : '')
     }, [currentShabat])
-    console.log(shabatStart)
-    console.log(shabatEnd)
 
     return (
         <Card className="card-row-1">

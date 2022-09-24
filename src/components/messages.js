@@ -7,7 +7,7 @@ export default function Messages() {
         <Card className="card-row-1">
             <Card.Title className='hebrew'>
 
-                הודעות
+                לעילוי נשמת
             </Card.Title>
             <Card.Text>
 

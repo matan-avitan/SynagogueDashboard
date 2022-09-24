@@ -9,6 +9,7 @@ import WebFooter from "../components/webFooter";
 import Deceased from "../components/deceased";
 
 import {shabatTimesData} from "../data/shabatTimesData";
+import NewDashboardTitle from "../components/newTitle";
 
 
 function Dashboard() {
@@ -117,7 +118,7 @@ function Dashboard() {
                 const today = new Date();
                 today.setDate(today.getDate() +1)
                 const shabatFound = shabatData.find(shabat => isBefore(today, shabat.date));
-                console.log(shabatFound)
+
                 const s = {
                     hebDate: shabatFound.hebDate,
                     date: shabatFound.date,
@@ -125,9 +126,8 @@ function Dashboard() {
                     shabatStart: shabatFound.shabatStart,
                     shabatEnd: shabatFound.shabatEnd
                 }
-                console.log(s);
                 setCurrentShabat(s)
-                console.log(currentShabat)
+
             }, 10000)
         }
 
@@ -142,11 +142,8 @@ function Dashboard() {
             <br/>
             <br/>
             <br/>
-            <DashboardTitle/>
-            <hr/>
-            <div>
-                <Clock/>
-            </div>
+
+            <NewDashboardTitle/>
             <hr/>
             <div>
                 <Row>
@@ -163,11 +160,10 @@ function Dashboard() {
 
                 </Row>
                 <br/>
-                <Row>
-                    <Col>
-                        <Deceased/>
-                    </Col>
-                </Row>
+                <br/>
+                <br/>
+                <br/>
+
                 <br/>
                 <Row>
                     <WebFooter/>
