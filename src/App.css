@@ -1,3 +1,91 @@
 .App {
-  text-align: center;
+    min-height: 100vh;
+    max-height: 100vh;
+    text-align: center;
+    background-color: #eee2cb;
+    background-image: url("frame-background-2.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+
+}
+
+.Dashboard {
+    max-width: 70%;
+    margin: auto;
+    text-align: center;
+
+}
+
+.card {
+    /*border: transparent !important;*/
+    background-color: transparent !important;
+
+}
+
+.card-row-1 {
+    min-height: 400px;
+    border: transparent !important;
+    background-color: transparent !important;
+    background-image: url("card-frame-3.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    padding-top: 10%;
+}
+
+.time-pray-text {
+    background-color: transparent !important;
+    border: transparent !important;
+    font-size: large !important;
+    min-width: 100px;
+    margin: auto !important;
+    text-align: right;
+}
+
+.time-pray {
+    width: 10% !important;
+    background-color: transparent !important;
+    border: transparent !important;
+    margin: auto !important;
+    text-align: right;
+}
+
+.card-row-1 .card-title {
+    font-size: 30px;
+}
+
+.card-row-1 .card-text h3 {
+    font-size: 20px;
+}
+
+.card-row-1 .card-text .input-group-text {
+    font-size: 20px !important;
+
+
+}
+
+.pray-card {
+    padding-top: 10px;
+    padding-right: 50px;
+    padding-left: 100px;
+}
+
+.deceased-card {
+    min-height: 150px;
+    align-content: center;
+    margin: auto;
+    max-width: 98%;
+    border-color: #ad8a45 !important;
+
+}
+
+.web-footer {
+    border-color: #ad8a45 !important;
+    margin: auto;
+    max-width: 97% !important;
+}
+
+.clock {
+    font-size: 50px;
 }

@@ -4,8 +4,11 @@ import React from "react";
 
 export default function Deceased() {
     return (
-        <Card>
-                                :נפטרים
+        <Card className="deceased-card">
+            <Card.Title dir="rtl" className='hebrew'>
+                נפטרים:
+            </Card.Title>
+
 
 
         </Card>
