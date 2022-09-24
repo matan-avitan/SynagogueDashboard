@@ -160,11 +160,11 @@ function Dashboard() {
                         <Deceased/>
                     </Col>
                     <Col lg={1}>
-                        <br/>
-                        <br/>
-                        <br/>
+
+
+
                         <div>
-                            <img className='gif-size' src={require('./velaVSantas3.gif')} alt='Logo'/>
+                            <img className='gif-size' src={require('./Candle.gif')} alt='Logo'/>
                         </div>
                     </Col>
 

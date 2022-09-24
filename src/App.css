@@ -6,7 +6,7 @@
     background-image: url("frame-background-2.png");
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 100% 100%;
+    background-size: 104% 105%;
 
 }
 
@@ -37,11 +37,9 @@
 .time-pray-text {
     background-color: transparent !important;
     border: transparent !important;
-    /*font-size: large !important;*/
-    width: 150px;
+    width: 120px;
     margin: auto !important;
     text-align: right;
-    font-size: 25px !important;
 }
 
 .time-pray {
@@ -68,8 +66,8 @@
 
 .pray-card {
     padding-top: 10px;
-    padding-right: 50px;
-    padding-left: 80px;
+    padding-right: 20px;
+    padding-left: 30px;
 }
 
 .deceased-card {

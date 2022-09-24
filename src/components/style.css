@@ -6,4 +6,9 @@
 
 .gif-size {
     width: 150px !important;
+    height: 350px !important;
+}
+
+.form-control {
+    font-size: 30px !important;
 }
