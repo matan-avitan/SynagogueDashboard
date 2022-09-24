@@ -11,7 +11,7 @@ function Clock() {
 
 
     const convertEnglishMonthToHebrew = (englishMonth) => {
-        switch (englishMonth){
+        switch (englishMonth) {
             case 'Tishri':
                 return 'תשרי'
             case 'Cheshvan':
@@ -42,7 +42,7 @@ function Clock() {
     useEffect(() => {
         setInterval(() => {
             const date = new Date();
-            setClockTime(date.toLocaleTimeString());
+            setClockTime(date.toLocaleTimeString('en-GB'));
         }, 1000)
     }, [])
 
@@ -59,11 +59,12 @@ function Clock() {
     return (
 
         <div>
-            <h1 className="clock">{clockTime}</h1>
-            <div dir='rtl'>
+            <span>
+                <h1 className="clock hebrew">{clockTime} {gematriya(parseInt(hebDayDate))} ב{convertEnglishMonthToHebrew(hebMonthDate)} {gematriya(parseInt(hebYearDate))}
+                </h1>
+            </span>
 
-            </div>
-            <h3 className=' hebrew'>{gematriya(parseInt(hebDayDate))} ב{convertEnglishMonthToHebrew(hebMonthDate)} {gematriya(parseInt(hebYearDate))}</h3>
+
         </div>
     )
 

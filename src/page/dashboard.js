@@ -169,12 +169,6 @@ function Dashboard() {
                     </Col>
                 </Row>
                 <br/>
-                <br/>
-
-                <br/>
-                <br/>
-                <br/>
-                <br/>
                 <Row>
                     <WebFooter/>
 
