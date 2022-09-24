@@ -1,8 +1,5 @@
 import React from "react";
 import {Col, Row} from "react-bootstrap";
-import PrayTime from "./prayTime";
-import Shabat from "./shabat";
-import Messages from "./messages";
 import Clock from "./Clock";
 import Date from "./date";
 

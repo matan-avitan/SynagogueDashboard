@@ -47,10 +47,7 @@ function FullDate() {
             const year = myDate.getFullYear()
             const day = myDate.getDay()
             const hDate = hebrewDate(year, month, day)
-            console.log(month)
-            console.log(year)
-            console.log(day)
-            console.log(hDate)
+
             setMonthDate(hDate.month_name);
             setDayDate(hDate.date);
             setYearDate(hDate.year);

@@ -3,7 +3,7 @@ import Clock from "../components/Clock";
 import {Card, Col, Row} from "react-bootstrap";
 import DashboardTitle from "../components/dashboardTitle";
 import PrayTime from "../components/prayTime";
-import Messages from "../components/messages";
+import Messages from "../components/deceased";
 import Shabat from "../components/shabat";
 import WebFooter from "../components/webFooter";
 import Deceased from "../components/deceased";
@@ -155,7 +155,7 @@ function Dashboard() {
                     </Col>
 
                     <Col>
-                        <Messages/>
+                        <Deceased/>
                     </Col>
 
                 </Row>
