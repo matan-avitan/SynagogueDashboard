@@ -135,35 +135,26 @@ function Dashboard() {
 
     return (
         <div>
-            <Carousel fade={true} controls={false} indicators={false} interval={200}>
-                <Carousel.Item interval={6000}>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <img
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
 
-                        src={require('./times2.png')}
+            <NewDashboardTitle/>
+            <hr/>
+            <div>
+                <Carousel  controls={false} indicators={false}>
+                    <Carousel.Item interval={6000}>
+                        <img  className='carousel-size'
+                            src={require('./times2.png')}
+                        />
+                    </Carousel.Item>
 
-                    />
-                </Carousel.Item>
-                <Carousel.Item interval={500}>
-                </Carousel.Item>
 
-                <Carousel.Item interval={30000}>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-
-                    <NewDashboardTitle/>
-                    <hr/>
-                    <div>
+                    <Carousel.Item interval={30000}>
                         <Row>
 
 
@@ -186,21 +177,19 @@ function Dashboard() {
                             </Col>
 
                         </Row>
-                        <br/>
+                    </Carousel.Item>
+
+                </Carousel>
+
+                <br/>
 
 
-                        <br/>
-                        <Row>
-                            <WebFooter/>
+                <br/>
+                <Row>
+                    <WebFooter/>
 
-                        </Row>
-                    </div>
-
-
-                </Carousel.Item>
-                                <Carousel.Item interval={500}>
-                </Carousel.Item>
-            </Carousel>
+                </Row>
+            </div>
 
 
         </div>
