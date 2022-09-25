@@ -149,7 +149,7 @@ function Dashboard() {
                 <Carousel  controls={false} indicators={false}>
                     <Carousel.Item interval={6000}>
                         <img  className='carousel-size'
-                            src={require('./time3.png')}
+                            src={require('./time4.png')}
                         />
                     </Carousel.Item>
 
