@@ -13,7 +13,7 @@ export default function Deceased() {
 
         return list.map(person => {
             return (
-                <Carousel.Item interval={2000}>
+                <Carousel.Item interval={3000}>
                     <div className='deceased'>
                         <h5 className='hebrew'>
                             {person.name}

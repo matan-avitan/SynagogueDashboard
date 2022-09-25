@@ -20,7 +20,7 @@ function Clock() {
 
         <div>
             <span>
-                <h1 className="clock hebrew">{clockTime}</h1>
+                <h1 className="clock">{clockTime}</h1>
             </span>
 
 
