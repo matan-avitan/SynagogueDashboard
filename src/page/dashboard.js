@@ -146,41 +146,62 @@ function Dashboard() {
             <NewDashboardTitle/>
             <hr/>
             <div>
-                <Carousel  controls={false} indicators={false}>
-                    <Carousel.Item interval={6000}>
-                        <img  className='carousel-size'
-                            src={require('./time5.png')}
-                        />
-                    </Carousel.Item>
+                {/*<Carousel  controls={false} indicators={false}>*/}
+                {/*    /!*<Carousel.Item interval={6000}>*!/*/}
+                {/*    /!*    <img  className='carousel-size'*!/*/}
+                {/*    /!*        src={require('./time5.png')}*!/*/}
+                {/*    /!*    />*!/*/}
+                {/*    /!*</Carousel.Item>*!/*/}
 
 
-                    <Carousel.Item interval={30000}>
-                        <Row>
+                {/*    <Carousel.Item interval={30000}>*/}
+                {/*        <Row>*/}
 
 
-                            <Col lg={3}>
-                                <PrayTime/>
-                            </Col>
-                            <Col lg={4}>
-                                <Shabat currentShabat={currentShabat}/>
-                            </Col>
+                {/*            <Col lg={3}>*/}
+                {/*                <PrayTime/>*/}
+                {/*            </Col>*/}
+                {/*            <Col lg={4}>*/}
+                {/*                <Shabat currentShabat={currentShabat}/>*/}
+                {/*            </Col>*/}
 
-                            <Col lg={4}>
-                                <Deceased/>
-                            </Col>
-                            <Col lg={1}>
+                {/*            <Col lg={4}>*/}
+                {/*                <Deceased/>*/}
+                {/*            </Col>*/}
+                {/*            <Col lg={1}>*/}
 
 
-                                <div>
-                                    <img className='gif-size' src={require('./Candle.gif')} alt='Logo'/>
-                                </div>
-                            </Col>
+                {/*                <div>*/}
+                {/*                    <img className='gif-size' src={require('./Candle.gif')} alt='Logo'/>*/}
+                {/*                </div>*/}
+                {/*            </Col>*/}
 
-                        </Row>
-                    </Carousel.Item>
+                {/*        </Row>*/}
+                {/*    </Carousel.Item>*/}
 
-                </Carousel>
+                {/*</Carousel>*/}
+                <Row>
 
+
+                    <Col lg={3}>
+                        <PrayTime/>
+                    </Col>
+                    <Col lg={4}>
+                        <Shabat currentShabat={currentShabat}/>
+                    </Col>
+
+                    <Col lg={4}>
+                        <Deceased/>
+                    </Col>
+                    <Col lg={1}>
+
+
+                        <div>
+                            <img className='gif-size' src={require('./Candle.gif')} alt='Logo'/>
+                        </div>
+                    </Col>
+
+                </Row>
                 <br/>
 
 

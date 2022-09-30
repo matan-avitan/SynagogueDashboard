@@ -97,3 +97,7 @@
     max-width: 300px;
     margin: auto;
 }
+
+.deceased-name {
+    font-size: 25px !important;
+}
