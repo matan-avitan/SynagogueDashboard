@@ -157,14 +157,7 @@ function Main() {
                     </Col>
 
                 </Row>
-                <br/>
 
-
-                <br/>
-                <Row>
-                    <WebFooter/>
-
-                </Row>
 
 
         </div>
