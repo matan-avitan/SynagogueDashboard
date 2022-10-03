@@ -6,14 +6,13 @@ export default function Deceased() {
 
     const deceasedDataFirst = deceasedData.slice(0, deceasedData.length / 2)
     const deceasedDataSecond = deceasedData.slice(deceasedData.length / 2, deceasedData.length)
-    // const deceasedDataThird = deceasedData.slice(deceasedData.length / 3 * 2, deceasedData.length)
 
 
     const getDeceasedCard = (list) => {
 
         return list.map(person => {
             return (
-                <Carousel.Item interval={3000}>
+                <Carousel.Item interval={3000}git>
                     <div className='deceased'>
                         <h5 className='hebrew deceased-name'>
                             {person.name}
@@ -35,15 +34,12 @@ export default function Deceased() {
                 <div className='box-carousel'>
                     <br/>
                     <br/>
-                    <Carousel className='deceased' controls={false} indicators={false}>
+                    <Carousel id='f1' className='deceased' controls={false} indicators={false} >
                         {getDeceasedCard(deceasedDataFirst)}
                     </Carousel>
-                    <Carousel className='deceased'  controls={false} indicators={false}>
+                    <Carousel id='f2' className='deceased'  controls={false} indicators={false}>
                         {getDeceasedCard(deceasedDataSecond)}
                     </Carousel>
-                    {/*<Carousel className='deceased'  controls={false} indicators={false}>*/}
-                    {/*    {getDeceasedCard(deceasedDataThird)}*/}
-                    {/*</Carousel>*/}
                 </div>
 
             </Card.Text>

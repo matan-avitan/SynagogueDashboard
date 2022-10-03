@@ -1,3 +1,5 @@
+
+
 import React, {useEffect, useState} from "react";
 import Clock from "../components/Clock";
 import {Card, Carousel, Col, Row} from "react-bootstrap";
@@ -9,14 +11,10 @@ import WebFooter from "../components/webFooter";
 import Deceased from "../components/deceased";
 
 import {shabatTimesData} from "../data/shabatTimesData";
-import NewDashboardTitle from "../components/newTitle";
-import Main from "./main";
 
-// import candle from "./Candle.gif";
 
-function Dashboard() {
+function Main() {
     const [shabatData, setShabatData] = useState([])
-    const [needCarousel, setNeedCarousel] = useState(false);
     const [currentShabat, setCurrentShabat] = useState({
         hebDate: "",
         date: "",
@@ -135,61 +133,30 @@ function Dashboard() {
 
     }, [shabatData])
 
-    useEffect(() => {
-        try {
-            require('./imgPage/img.png')
-            setNeedCarousel(true);
-
-        } catch (e) {
-            setNeedCarousel(false);
-
-        }
-        console.log(needCarousel)
-    }, [])
-
-
-    const getCenterPage = () => {
-        if (needCarousel) {
-            return (
-                <div>
-                    <Carousel id='f' controls={false} indicators={false} fade={true}>
-                        <Carousel.Item interval={6000}>
-                            <img className='carousel-size'
-                                 src={require('./imgPage/img.png')}
-                            />
-                        </Carousel.Item>
-
-
-                        <Carousel.Item interval={30000}>
-                            <Main/>
-
-                        </Carousel.Item>
-
-                    </Carousel>
-                </div>
-
-            )
-        } else {
-            return (<div>
-                <Main/>
-            </div>)
-        }
-    }
-
     return (
         <div>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
+                <Row>
 
-            <NewDashboardTitle/>
-            <hr/>
-            <div>
-                {getCenterPage()}
+
+                    <Col lg={3}>
+                        <PrayTime/>
+                    </Col>
+                    <Col lg={4}>
+                        <Shabat currentShabat={currentShabat}/>
+                    </Col>
+
+                    <Col lg={4}>
+                        <Deceased/>
+                    </Col>
+                    <Col lg={1}>
+
+
+                        <div>
+                            <img className='gif-size' src={require('./Candle.gif')} alt='Logo'/>
+                        </div>
+                    </Col>
+
+                </Row>
                 <br/>
 
 
@@ -198,11 +165,10 @@ function Dashboard() {
                     <WebFooter/>
 
                 </Row>
-            </div>
 
 
         </div>
     )
 }
 
-export default Dashboard
+export default Main
