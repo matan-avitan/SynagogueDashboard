@@ -33,7 +33,16 @@ function Dashboard() {
                     <Carousel id='f' controls={false} indicators={false} fade={true}>
                         <Carousel.Item interval={6000}>
                             <img className='carousel-size'
-                                 src={require('./imgPage/img.png')}
+                                 src={require('./imgPage/page1.png')}
+                            />
+                        </Carousel.Item>
+
+                        <Carousel.Item interval={500}>
+                            <div className='carousel-size'></div>
+                        </Carousel.Item>
+                        <Carousel.Item interval={6000}>
+                            <img className='carousel-size'
+                                 src={require('./imgPage/page2.png')}
                             />
                         </Carousel.Item>
 
