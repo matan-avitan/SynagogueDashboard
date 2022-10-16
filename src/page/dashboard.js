@@ -8,22 +8,7 @@ import Main from "./main";
 
 
 function Dashboard() {
-    const [needCarousel, setNeedCarousel] = useState(false);
-    const [imgSrc, setImgSrc] = useState('default.png')
-
-    useEffect(() => {
-        try {
-            require('./imgPage/img.png')
-            setNeedCarousel(true);
-            setImgSrc('./imgPage/img.png')
-
-        } catch (e) {
-            setNeedCarousel(false);
-            setImgSrc('default.png')
-
-        }
-        console.log(needCarousel)
-    }, [])
+    const [needCarousel, setNeedCarousel] = useState(true);
 
 
     const getCenterPage = () => {
@@ -33,7 +18,7 @@ function Dashboard() {
                     <Carousel id='f' controls={false} indicators={false} fade={true}>
                         <Carousel.Item interval={6000}>
                             <img className='carousel-size'
-                                 src={require('./imgPage/page1.png')}
+                                 src={require('./imgPage/page1.PNG')}
                             />
                         </Carousel.Item>
 
@@ -42,7 +27,16 @@ function Dashboard() {
                         </Carousel.Item>
                         <Carousel.Item interval={6000}>
                             <img className='carousel-size'
-                                 src={require('./imgPage/page2.png')}
+                                 src={require('./imgPage/page2.PNG')}
+                            />
+                        </Carousel.Item>
+
+                        <Carousel.Item interval={500}>
+                            <div className='carousel-size'></div>
+                        </Carousel.Item>
+                        <Carousel.Item interval={6000}>
+                            <img className='carousel-size'
+                                 src={require('./imgPage/page3.PNG')}
                             />
                         </Carousel.Item>
 

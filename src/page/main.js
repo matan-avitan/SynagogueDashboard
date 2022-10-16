@@ -139,7 +139,7 @@ function Main() {
 
 
                     <Col lg={3}>
-                        <PrayTime/>
+                        <PrayTime currentShabat={currentShabat}/>
                     </Col>
                     <Col lg={4}>
                         <Shabat currentShabat={currentShabat}/>
