@@ -28,7 +28,8 @@ export default function PrayTime(props) {
         const MS_PER_MINUTE = 60000;
         let nowArvit = new Date("1970-01-01T" + props.currentShabat.shabatEnd)
         let updatedArvit = new Date(nowArvit - 15 * MS_PER_MINUTE)
-        setArvitShabat(updatedArvit.getHours() + ':' + updatedArvit.getMinutes())
+        const Minutes = updatedArvit.getMinutes() > 9 ? updatedArvit.getMinutes() : "0" + updatedArvit.getMinutes()
+        setArvitShabat(updatedArvit.getHours() + ':' + Minutes)
     }, [props.currentShabat.shabatEnd])
 
     return (
@@ -92,6 +93,7 @@ export default function PrayTime(props) {
                                 className="time-pray"
                                 value={arvitShabat}
                                 onChange={(e) => {
+                                    console.log(e.target.value)
                                     setArvitShabat(e.target.value)
                                 }}
                             />

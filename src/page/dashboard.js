@@ -29,7 +29,9 @@ function Dashboard() {
                                            <Main/>
 
                         </Carousel.Item>
-
+                        <Carousel.Item interval={500}>
+                            <div className='carousel-size'></div>
+                        </Carousel.Item>
 
                     </Carousel>
                 </div>
