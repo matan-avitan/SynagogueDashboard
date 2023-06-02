@@ -16,7 +16,8 @@ export default function PrayTime(props) {
         let updatedArvit = new Date(nowArvit - (- 15 * MS_PER_MINUTE))
 
         if (updatedArvit.getHours()) {
-            setArvitShihi(updatedArvit.getHours() + ':' + updatedArvit.getMinutes())
+            const Minutes = updatedArvit.getMinutes() > 9 ? updatedArvit.getMinutes() : "0" + updatedArvit.getMinutes()
+            setArvitShihi(updatedArvit.getHours() + ':' + Minutes)
         } else {
             setArvitShihi(props.currentShabat.shabatStart)
         }
