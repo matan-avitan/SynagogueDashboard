@@ -8,7 +8,7 @@ import Main from "./main";
 
 
 function Dashboard() {
-    const [needCarousel, setNeedCarousel] = useState(false);
+    const [needCarousel, setNeedCarousel] = useState(true);
 
 
     const getCenterPage = () => {
